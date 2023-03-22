@@ -113,18 +113,19 @@ namespace PL
             ML.Banco banco = new ML.Banco();
             ML.Result result = BL.Banco.GetAll();
 
-            foreach (ML.Banco ba in result.Objects)
+            foreach (ML.Banco banc in result.Objects)
             {
-                Console.WriteLine("IdBanco: " + banco.IdBanco);
-                Console.WriteLine("Nombre de Banco: " + banco.Nombre);
-                Console.WriteLine("Numero de empleados: " + banco.NoEmpleados);
-                Console.WriteLine("Numero de sucursales:" + banco.NoSucursales);
+                Console.WriteLine("IdBanco: " + banc.IdBanco);
+                Console.WriteLine("Nombre de Banco: " + banc.Nombre);
+                Console.WriteLine("Numero de empleados: " + banc.NoEmpleados);
+                Console.WriteLine("Numero de sucursales:" + banc.NoSucursales);
                 banco.Pais = new ML.Pais();
-                Console.WriteLine("IdPais: " + banco.Pais.IdPais);
-                Console.WriteLine("Capital: " + banco.Capital);
+                Console.WriteLine("IdPais: " + banc.Pais.IdPais);
+                Console.WriteLine("Capital: " + banc.Capital);
                 banco.RazonSocial = new ML.RazonSocial();
-                Console.WriteLine("IdRazonSocial: " + banco.RazonSocial.IdRazonSocial);
-                Console.WriteLine("Numero de clientes: " + banco.NoClientes);
+                Console.WriteLine("IdRazonSocial: " + banc.RazonSocial.IdRazonSocial);
+                Console.WriteLine("Numero de clientes: " + banc.NoClientes);
+                Console.WriteLine("---------------------------------------------------");
             }
             if (result.Correct == true)
             {
